@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindForge AI - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <header class="flex justify-between items-center mb-10 bg-white shadow-md rounded-lg p-6">
+            <div>
+                <h1 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">MindForge AI</h1>
+                <p id="user-greeting" class="text-gray-600 mt-2 text-lg"></p>
+            </div>
+            <button id="logout-btn" class="flex items-center bg-gradient-to-r from-red-500 to-pink-500 text-white px-6 py-3 rounded-full hover:opacity-90 transition transform hover:scale-105">
+                <i class="fas fa-sign-out-alt mr-2"></i> Logout
+            </button>
+        </header>
+
+        <main>
+            <section class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-xl transform transition hover:scale-105 hover:shadow-2xl">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-blue-800">Machine Learning Basics</h3>
+                            <i class="fas fa-brain text-blue-500 text-2xl"></i>
+                        </div>
+                        <div class="bg-blue-100 h-3 w-full rounded-full mb-3 overflow-hidden">
+                            <div class="bg-blue-600 h-3 rounded-full" style="width: 45%"></div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p class="text-sm text-gray-600">Progress: 45%</p>
+                            <span class="text-blue-600 font-semibold">Intermediate</span>
+                        </div>
+                        <button class="mt-6 w-full bg-gradient-to-r from-blue-500 to-blue-700 text-white py-3 rounded-lg hover:opacity-90 transition transform hover:scale-102 flex items-center justify-center">
+                            <i class="fas fa-play mr-2"></i> Continue Course
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-xl transform transition hover:scale-105 hover:shadow-2xl">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-green-800">Python Programming</h3>
+                            <i class="fas fa-code text-green-500 text-2xl"></i>
+                        </div>
+                        <div class="bg-green-100 h-3 w-full rounded-full mb-3 overflow-hidden">
+                            <div class="bg-green-600 h-3 rounded-full" style="width: 75%"></div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p class="text-sm text-gray-600">Progress: 75%</p>
+                            <span class="text-green-600 font-semibold">Advanced</span>
+                        </div>
+                        <button class="mt-6 w-full bg-gradient-to-r from-green-500 to-green-700 text-white py-3 rounded-lg hover:opacity-90 transition transform hover:scale-102 flex items-center justify-center">
+                            <i class="fas fa-play mr-2"></i> Continue Course
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-xl transform transition hover:scale-105 hover:shadow-2xl">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-purple-800">Data Science</h3>
+                            <i class="fas fa-chart-line text-purple-500 text-2xl"></i>
+                        </div>
+                        <div class="bg-purple-100 h-3 w-full rounded-full mb-3 overflow-hidden">
+                            <div class="bg-purple-600 h-3 rounded-full" style="width: 30%"></div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p className="text-sm text-gray-600">Progress: 30%</p>
+                            <span className="text-purple-600 font-semibold">Beginner</span>
+                        </div>
+                        <button class="mt-6 w-full bg-gradient-to-r from-purple-500 to-purple-700 text-white py-3 rounded-lg hover:opacity-90 transition transform hover:scale-102 flex items-center justify-center">
+                            <i class="fas fa-play mr-2"></i> Continue Course
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mt-12">
+                <h2 class="text-3xl font-bold mb-8 text-gray-800 text-center">Recommended Learning Paths</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-xl shadow-xl p-8 transform transition hover:scale-105 hover:shadow-2xl">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-2xl font-bold text-blue-800">AI & Machine Learning</h3>
+                            <i class="fas fa-robot text-blue-500 text-3xl"></i>
+                        </div>
+                        <ul class="space-y-4 text-gray-700 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-chevron-right text-blue-500 mr-3"></i>
+                                Introduction to AI Concepts
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-chevron-right text-blue-500 mr-3"></i>
+                                Machine Learning Fundamentals
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-chevron-right text-blue-500 mr-3"></i>
+                                Neural Networks and Deep Learning
+                            </li>
+                        </ul>
+                        <button class="w-full bg-gradient-to-r from-blue-500 to-blue-700 text-white py-3 rounded-lg hover:opacity-90 transition transform hover:scale-102 flex items-center justify-center">
+                            <i class="fas fa-graduation-cap mr-2"></i> Start Path
+                        </button>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-xl p-8 transform transition hover:scale-105 hover:shadow-2xl">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-2xl font-bold text-green-800">Software Development</h3>
+                            <i class="fas fa-laptop-code text-green-500 text-3xl"></i>
+                        </div>
+                        <ul class="space-y-4 text-gray-700 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-chevron-right text-green-500 mr-3"></i>
+                                Python Programming
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-chevron-right text-green-500 mr-3"></i>
+                                Web Development Basics
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-chevron-right text-green-500 mr-3"></i>
+                                Advanced Coding Techniques
+                            </li>
+                        </ul>
+                        <button class="w-full bg-gradient-to-r from-green-500 to-green-700 text-white py-3 rounded-lg hover:opacity-90 transition transform hover:scale-102 flex items-center justify-center">
+                            <i class="fas fa-graduation-cap mr-2"></i> Start Path
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script type="module">
+        import {
+            logoutUser,
+            setupAuthStateObserver
+        } from './js/firebase-config.js';
+
+        // Authentication State Observer
+        setupAuthStateObserver((user) => {
+            if (user) {
+                // Update user greeting
+                const greetingEl = document.getElementById('user-greeting');
+                if (greetingEl) {
+                    greetingEl.textContent = `Welcome back, ${user.displayName || user.email}!`;
+                }
+            } else {
+                // Redirect to login if not authenticated
+                window.location.href = 'index.html';
+            }
+        });
+
+        // Logout Button
+        document.getElementById('logout-btn')?.addEventListener('click', async () => {
+            try {
+                await logoutUser();
+                window.location.href = 'index.html';
+            } catch (error) {
+                console.error('Logout error', error);
+            }
+        });
+    </script>
+</body>
+
+</html>

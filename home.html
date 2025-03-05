@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindForge AI - Revolutionizing Personalized Learning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-white min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <span class="ml-3 text-2xl font-bold text-blue-600">MindForge AI</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#features" class="text-gray-700 hover:text-blue-600 transition">Features</a>
+                    <a href="#how-it-works" class="text-gray-700 hover:text-blue-600 transition">How It Works</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-blue-600 transition">Pricing</a>
+                    <div class="space-x-4">
+                        <a href="index.html" class="text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium">Login</a>
+                        <a href="signup.html" class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition">Sign Up</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-toggle" class="text-gray-700 hover:text-blue-600">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 hidden">
+        <div class="flex flex-col items-center justify-center h-full space-y-6 text-center">
+            <a href="#features" class="text-2xl text-gray-700 hover:text-blue-600">Features</a>
+            <a href="#how-it-works" class="text-2xl text-gray-700 hover:text-blue-600">How It Works</a>
+            <a href="#pricing" class="text-2xl text-gray-700 hover:text-blue-600">Pricing</a>
+            <div class="space-y-4">
+                <a href="index.html" class="block text-lg text-gray-700 hover:bg-gray-100 px-6 py-3 rounded-md">Login</a>
+                <a href="signup.html" class="block bg-blue-600 text-white px-6 py-3 rounded-md text-lg hover:bg-blue-700">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <main class="pt-24 pb-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+                    Personalized Learning, <span class="text-blue-600">Powered by AI</span>
+                </h1>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
+                    Transform your educational journey with intelligent, adaptive learning technologies that understand your unique needs and help you achieve your academic goals.
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="signup.html" class="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition transform hover:-translate-y-1 shadow-lg">
+                        Start Your Learning Journey
+                    </a>
+                    <a href="#features" class="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold border border-blue-600 hover:bg-blue-50 transition transform hover:-translate-y-1 shadow-md">
+                        Explore Features
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <section id="features" class="mt-24 max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Revolutionize Your Learning</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Cutting-edge AI technologies designed to enhance your educational experience.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition group">
+                    <div class="text-blue-600 text-5xl mb-6 transform group-hover:scale-110 transition">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Intelligent Tutoring</h3>
+                    <p class="text-gray-600 mb-4">
+                        Personalized AI tutor that adapts to your learning style, providing tailored explanations and guidance.
+                    </p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold inline-flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition group">
+                    <div class="text-blue-600 text-5xl mb-6 transform group-hover:scale-110 transition">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Advanced Analytics</h3>
+                    <p class="text-gray-600 mb-4">
+                        Comprehensive learning analytics that track progress, identify strengths, and highlight areas for improvement.
+                    </p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold inline-flex items-center">
+                        Explore Insights <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition group">
+                    <div class="text-blue-600 text-5xl mb-6 transform group-hover:scale-110 transition">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Adaptive Learning</h3>
+                    <p class="text-gray-600 mb-4">
+                        Dynamic learning paths that adjust in real-time based on your performance and learning patterns.
+                    </p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold inline-flex items-center">
+                        Discover Potential <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="mt-24 bg-blue-50 py-16">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">How MindForge AI Works</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        A seamless, intelligent learning experience from start to finish.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="bg-white p-6 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-md">
+                            <span class="text-3xl font-bold text-blue-600">1</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-gray-900">Personalized Assessment</h3>
+                        <p class="text-gray-600">
+                            Our AI conducts an initial comprehensive assessment to understand your current knowledge level.
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="bg-white p-6 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-md">
+                            <span class="text-3xl font-bold text-blue-600">2</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-gray-900">Custom Learning Path</h3>
+                        <p class="text-gray-600">
+                            Based on the assessment, we create a unique, tailored learning journey just for you.
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="bg-white p-6 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 shadow-md">
+                            <span class="text-3xl font-bold text-blue-600">3</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-gray-900">Continuous Improvement</h3>
+                        <p class="text-gray-600">
+                            Our AI continuously adapts and refines your learning experience based on your progress.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="mt-24 max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Flexible Pricing Plans</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Choose the plan that fits your learning needs and budget.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Free</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-blue-600">$0</span>
+                        <span class="text-gray-600">/month</span>
+                    </div>
+                    <ul class="mb-8 space-y-4 text-gray-600">
+                        <li>Basic AI Tutoring</li>
+                        <li>Limited Analytics</li>
+                        <li>1 Course Access</li>
+                    </ul>
+                    <a href="signup.html" class="block bg-blue-50 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-100">
+                        Get Started
+                    </a>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center border-2 border-blue-600">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Pro</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-blue-600">$9.99</span>
+                        <span class="text-gray-600">/month</span>
+                    </div>
+                    <ul class="mb-8 space-y-4 text-gray-600">
+                        <li>Advanced AI Tutoring</li>
+                        <li>Comprehensive Analytics</li>
+                        <li>Unlimited Course Access</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <a href="signup.html" class="block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+                        Choose Pro
+                    </a>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Enterprise</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-blue-600">Custom</span>
+                    </div>
+                    <ul class="mb-8 space-y-4 text-gray-600">
+                        <li>Custom AI Solutions</li>
+                        <li>Team Collaboration</li>
+                        <li>Dedicated Support</li>
+                        <li>Advanced Reporting</li>
+                    </ul>
+                    <a href="#" class="block bg-blue-50 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-100">
+                        Contact Sales
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="mt-24 bg-blue-600 text-white py-20">
+            <div class="max-w-4xl mx-auto text-center px-4">
+                <h2 class="text-4xl font-bold mb-6">Ready to Transform Your Learning?</h2>
+                <p class="text-xl mb-10">
+                    Join thousands of learners who are achieving their educational goals with MindForge AI.
+                </p>
+                <a href="signup.html" class="bg-white text-blue-600 px-10 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition transform hover:-translate-y-1 shadow-lg">
+                    Start Your Free Trial
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Previous content remains the same, continuing from the cut-off footer -->
+
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8">
+            <div>
+                <h4 class="text-xl font-bold mb-6">MindForge AI</h4>
+                <p class="text-gray-400">
+                    Revolutionizing education through intelligent, personalized AI-powered learning solutions.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+                <ul class="space-y-3">
+                    <li><a href="#features" class="text-gray-300 hover:text-white">Features</a></li>
+                    <li><a href="#how-it-works" class="text-gray-300 hover:text-white">How It Works</a></li>
+                    <li><a href="#pricing" class="text-gray-300 hover:text-white">Pricing</a></li>
+                    <li><a href="index.html" class="text-gray-300 hover:text-white">Login</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold mb-6">Support</h4>
+                <ul class="space-y-3">
+                    <li><a href="#" class="text-gray-300 hover:text-white">Help Center</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">Contact Us</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">Privacy Policy</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold mb-6">Connect With Us</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-300 hover:text-white text-2xl">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white text-2xl">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white text-2xl">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white text-2xl">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="mt-6">
+                    <label for="newsletter" class="block mb-2 text-sm">Subscribe to our Newsletter</label>
+                    <div class="flex">
+                        <input 
+                            type="email" 
+                            id="newsletter" 
+                            placeholder="Enter your email" 
+                            class="w-full px-4 py-2 text-gray-900 rounded-l-lg focus:outline-none"
+                        >
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-r-lg hover:bg-blue-700">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-8 border-t border-gray-800 pt-6">
+            <p class="text-gray-400">&copy; 2024 MindForge AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                const mobileMenu = document.getElementById('mobile-menu');
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
