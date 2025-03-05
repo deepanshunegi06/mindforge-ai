@@ -3,45 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MindForge AI - Sign Up</title>
+    <title>MindForge AI - Login</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-gray-50 min-h-screen flex flex-col items-center justify-center">
-
-    <!-- Navbar -->
+<body class="bg-gray-50 min-h-screen flex items-center justify-center">
     <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center h-20">
-                <a href="index.html" class="text-2xl font-bold text-blue-600">
+                <a href="index.html" class="text-2xl font-bold text-blue-600 ">
                     MindForge AI
                 </a>
             </div>
         </div>
     </nav>
+    
+    
 
-    <!-- Signup Form -->
-    <div class="w-full max-w-md p-8 space-y-8 bg-white rounded-xl shadow-lg mt-24">
+    <div class="w-full max-w-md p-8 space-y-8 bg-white rounded-xl shadow-lg">
         <div class="text-center">
-            <h1 class="text-4xl font-bold text-blue-600 mb-4">Create Account</h1>
-            <p class="text-gray-600">Start your learning journey</p>
+            <h1 class="text-4xl font-bold text-blue-600 mb-4">MindForge AI</h1>
+            <p class="text-gray-600">Your Personalized Learning Platform</p>
         </div>
 
-        <form id="signup-form" class="space-y-6">
-            <div>
-                <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
-                <input 
-                    type="text" 
-                    id="signup-name" 
-                    required 
-                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                >
-            </div>
+        <form id="login-form" class="space-y-6">
             <div>
                 <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
                 <input 
                     type="email" 
-                    id="signup-email" 
+                    id="login-email" 
                     required 
                     class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                 >
@@ -50,19 +40,17 @@
                 <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
                 <input 
                     type="password" 
-                    id="signup-password" 
+                    id="login-password" 
                     required 
-                    minlength="6"
                     class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                 >
             </div>
-            <p id="error-message" class="text-red-500 text-sm text-center"></p>
             <div>
                 <button 
                     type="submit" 
                     class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                 >
-                    Sign Up
+                    Login
                 </button>
             </div>
         </form>
@@ -75,58 +63,55 @@
             </div>
 
             <button 
-                id="google-signup"
+                id="google-signin"
                 class="w-full flex items-center justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
             >
                 <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" class="w-5 h-5 mr-2">
-                Sign up with Google
+                Sign in with Google
             </button>
         </div>
 
         <div class="text-center">
             <p class="text-sm text-gray-600">
-                Already have an account? 
-                <a href="login.html" class="text-blue-600 hover:text-blue-800">Login</a>
+                Don't have an account? 
+                <a href="signup.html" class="text-blue-600 hover:text-blue-800">Sign Up</a>
             </p>
         </div>
     </div>
 
     <script type="module">
-        import { signUpWithEmail, signInWithGoogle } from './js/firebase-config.js';
+        import { 
+            loginWithEmail, 
+            signInWithGoogle 
+        } from './js/firebase-config.js';
 
-        const errorMessage = document.getElementById('error-message');
-
-        // Signup Form Handler
-        document.getElementById('signup-form')?.addEventListener('submit', async (e) => {
+        // Login Form Handler
+        document.getElementById('login-form')?.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const name = document.getElementById('signup-name').value.trim();
-            const email = document.getElementById('signup-email').value.trim();
-            const password = document.getElementById('signup-password').value;
-
-            if (!name) {
-                errorMessage.textContent = "Please enter your full name.";
-                return;
-            }
-
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            
             try {
-                const userCredential = await signUpWithEmail(email, password, name);
-                console.log("User signed up:", userCredential.user);
+                await loginWithEmail(email, password);
                 window.location.href = 'dashboard.html';
             } catch (error) {
-                errorMessage.textContent = error.message;
+                alert(error.message);
             }
         });
 
-        // Google Sign-Up Handler
-        document.getElementById('google-signup')?.addEventListener('click', async () => {
+        // Google Sign-In Handler
+        document.getElementById('google-signin')?.addEventListener('click', async () => {
             try {
                 await signInWithGoogle();
                 window.location.href = 'dashboard.html';
             } catch (error) {
-                errorMessage.textContent = error.message;
+                alert(error.message);
             }
         });
     </script>
-
+    <!-- <script>
+        window.location.href = "home.html";
+    </script> -->
+    
 </body>
 </html>
